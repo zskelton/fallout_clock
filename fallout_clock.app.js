@@ -55,7 +55,7 @@ function getCurrentTime() {
     console.log(e);
     return "0:00";
   }
-};
+}
 
 // Return String of Current Date
 function getCurrentDate() {
@@ -69,13 +69,13 @@ function getCurrentDate() {
     console.log(e);
     return "0.0.0000";
   }
-};
+}
 
 // Set A New Draw for the Next Minute
 function setNextDraw() {
   // Clear Timeout
   if (timer) {
-    clearTimeout(timer);
+    clearInterval(timer);
   }
   // Calculate time until next minute
   const d = new Date();
@@ -83,8 +83,8 @@ function setNextDraw() {
   const ms = d.getMilliseconds();
   const delay = 60000 - (s * 1000) - ms;
   // Set Timeout
-  timer = setTimeout(draw, delay);
-};
+  timer = setInterval(draw, delay);
+}
 
 function draw() {
   // Reset Variables
@@ -110,22 +110,28 @@ function draw() {
   g.drawString(dateStr, W/2, H-45, true);
   // Draw Border
   g.setColor(0,0.93,0);
-  g.drawLine(5,9,W-5,9);
+  g.drawLine(5,36,W-5,36);
   g.drawLine(5,H-9,W-5,H-9);
   g.setColor(0,0.18,0);
-  g.fillRect(0,0,W,5);
+  g.fillRect(0,27,W,32);
   g.fillRect(0,H,W,H-5);
-};
+  // Draw Widgets
+  Bangle.drawWidgets();
+  // Schedule Next Draw
+  setNextDraw();
+}
 
 /* MAIN LOOP */
 function main() {
-  // Clear Screen at Start of App
+  // Clear Screen
   g.clear();
   // Set as Clock to Enable Launcher Screen on BTN1
   Bangle.setUI("clock");
+  // Load Widgets
+  Bangle.loadWidgets();
   // Draw Clock
   draw();
-};
+}
 
 /* BOOT CODE */
 main();

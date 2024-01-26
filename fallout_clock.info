@@ -1,7 +1,7 @@
 {
   "id":"fallout_clock",
   "name":"Fallout Clock",
-  "version":"0.1.0",
+  "version":"0.1.1",
   "description":"A simple clock for the Fallout fan",
   "icon":"fallout_clock.icon.png",
   "type":"clock",
