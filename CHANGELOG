@@ -1,4 +1,5 @@
 Version 0:
 0.1.0 - (20240125): Basic Working Clock.
 0.1.1 - (20240125): Widgets Added. Improved Interval Loop.
+0.1.2 - (20240221): Fix: Month Reporting Wrong
 

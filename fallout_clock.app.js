@@ -64,7 +64,8 @@ function getCurrentDate() {
     const year = d.getFullYear();
     const month = d.getMonth();
     const day = d.getDate();
-    return `${month.toString() + 1}.${day.toString().padStart(2,0)}.${year}`;
+    const display = `${month + 1}.${day.toString().padStart(2,0)}.${year}`;
+    return display;
   } catch (e) {
     console.log(e);
     return "0.0.0000";
@@ -73,6 +74,7 @@ function getCurrentDate() {
 
 // Set A New Draw for the Next Minute
 function setNextDraw() {
+  console.log("tick")
   // Clear Timeout
   if (timer) {
     clearInterval(timer);
