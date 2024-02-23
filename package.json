@@ -1,6 +1,6 @@
 {
   "name": "fallout_clock",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "A Clock Face inspired by Fallout for Bangle2js",
   "main": "fallout_clock.app.js",
   "scripts": {
