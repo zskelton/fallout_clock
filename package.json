@@ -1,0 +1,33 @@
+{
+  "name": "fallout_clock",
+  "version": "0.2.1",
+  "description": "A Clock Face inspired by Fallout for Bangle2js",
+  "main": "fallout_clock.app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zskelton/fallout_clock.git"
+  },
+  "keywords": [
+    "Bangle",
+    "bangle2js",
+    "js",
+    "fallout"
+  ],
+  "author": "Zachary D. Skelton <zskelton@skeltonnetworks.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zskelton/fallout_clock/issues"
+  },
+  "homepage": "https://github.com/zskelton/fallout_clock#readme",
+  "standard.options": {
+    "ignore": [
+      "node_modules/**"
+    ]
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  }
+}
